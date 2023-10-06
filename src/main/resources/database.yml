@@ -1,0 +1,9 @@
+# ------------------------------------------ #
+# Database Configuration for Lumania Economy #
+# ------------------------------------------ #
+
+Host: "localhost"
+Port: 3306
+Database: ""
+Username: "root"
+Password: ""

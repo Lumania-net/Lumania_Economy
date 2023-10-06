@@ -1,0 +1,51 @@
+# ------------------------------------------ #
+# Messages Configuration for Lumania Economy #
+# ------------------------------------------ #
+
+Prefix: ""
+Errors:
+  ConsoleSender: "%prefix% &cDu must ein Spieler sein, um diesen Befehl ausführen zu können"
+  NoPermissions: "%prefix% &cDazu hast du keine Rechte"
+  TargetOffline: "%prefix% %target% &cist offline"
+  NoOneToPay: "%prefix% &cEs ist niemand online, dem du etwas zahlen könntest"
+  PaySelf: "%prefix% &cDu kannst dir selber keine Coins zahlen"
+  TargetHasToggledPay: "%prefix% &b%target% &7mag keine Zahlungen erhalten"
+Commands:
+  Money:
+    Show:
+      Self: "%prefix% Du hast &b%coins% Coins"
+      Self1: "%prefix% Du hast &b1 Coin"
+      Other: "%prefix% &b%target% &7hat &b%coins% Coins"
+      Other1: "%prefix% &b%target% &7hat &b1 Coin"
+    Set:
+      Self: "%prefix% Du hast deine Coins auf &b%coins% Coins &7gesetzt"
+      Self1: "%prefix% Du hast deine Coins auf &b1 Coin &7gesetzt"
+      Other: "%prefix% Du hast die Coins von &b%target% &7auf &b%coins% Coins &7gesetzt"
+      Other1: "%prefix% Du hast die Coins von &b%target% &7auf &b1 Coin &7gesetzt"
+      OtherReceiver: "%prefix% &b%target% &7hat die Coins von dir auf &b%coins% Coins &7gesetzt"
+      OtherReceiver1: "%prefix% &b%target% &7hat die Coins von dir auf &b1 Coin &7gesetzt"
+    Add:
+      Self: "%prefix% Du hast deinen Coins &b%coins% Coins &7hinzugefügt"
+      Self1: "%prefix% Du hast deinen Coins &b1 Coin &7hinzugefügt"
+      Other: "%prefix% Du hast den Coins von &b%target% %coins% Coins &7hinzugefügt"
+      Other1: "%prefix% Du hast den Coins von &b%target% 1 Coin &7hinzugefügt"
+      OtherReceiver: "%prefix% &b%target% &7hat deinen Coins &b%coins% Coins &7hinzugefügt"
+      OtherReceiver1: "%prefix% &b%target% &7hat deinen Coins &b1Coin &7hinzugefügt"
+    Remove:
+      Self: "%prefix% Du hast deinen Coins &b%coins% Coins &7abgezogen"
+      Self1: "%prefix% Du hast deinen Coins &b1 Coin &7abgezogen"
+      Other: "%prefix% Du hast den Coins von &b%target% %coins% Coins &7abgezogen"
+      Other1: "%prefix% Du hast den Coins von &b%target% 1 Coin &7abgezogen"
+      OtherReceiver: "%prefix% &b%target% &7hat deinen Coins &b%coins% Coins &7abgezogen"
+      OtherReceiver1: "%prefix% &b%target% &7hat deinen Coins &b1Coin &7abgezogen"
+  Pay:
+    Toggle:
+      On: "%prefix% Du &akannst &7nun Zahlungen erhalten"
+      Off: "%prefix% Du &ckannst &7nun &ckeine &7Zahlungen erhalten"
+    Player:
+      Send: "%prefix% Du hast &b%target% %coins% Coins &7gezahlt"
+      Send1: "%prefix% Du hast &b%target% 1 Coin &7gezahlt"
+      Other: "%prefix% &b%target% hat dir %coins% Coins &7gezahlt"
+      Other1: "%prefix% &b%target% hat dir 1 Coin &7gezahlt"
+  Payall: "%prefix% Du hast jedem Spieler &b%coins% Coins &7gezahlt"
+  Payall1: "%prefix% Du hast jedem Spieler &b1 Coin &7gezahlt"

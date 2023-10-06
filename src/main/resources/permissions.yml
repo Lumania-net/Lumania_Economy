@@ -1,0 +1,22 @@
+# --------------------------------------------- #
+# Permissions Configuration for Lumania Economy #
+# --------------------------------------------- #
+
+Commands:
+  Money:
+    Show:
+      Self: "lumania.commands.money.show.self"
+      Other: "lumania.commands.money.show.other"
+    Set:
+      Self: "lumania.commands.money.set.self"
+      Other: "lumania.commands.money.set.other"
+    Add:
+      Self: "lumania.commands.money.add.self"
+      Other: "lumania.commands.money.add.other"
+    Remove:
+      Self: "lumania.commands.money.remove.self"
+      Other: "lumania.commands.money.remove.self"
+  Pay:
+    Toggle: "lumania.commands.pay.toggle"
+    Player: "lumania.commands.pay.player"
+  Payall: "lumania.commands.payall"
