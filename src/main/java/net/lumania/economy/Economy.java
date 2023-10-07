@@ -1,6 +1,9 @@
 package net.lumania.economy;
 
 import lombok.Getter;
+import net.lumania.economy.commands.PayCommand;
+import net.lumania.economy.commands.money.MoneyCommandManager;
+import net.lumania.economy.commands.PayallCommand;
 import net.lumania.economy.database.DatabaseUtils;
 import net.lumania.economy.database.EconomyAPI;
 import net.lumania.economy.expansions.CoinsExpansion;
@@ -70,6 +73,9 @@ public final class Economy extends JavaPlugin {
 
     private void register() {
         new PlayerHandler(this);
+        new PayallCommand(this);
+        new PayCommand(this);
+        new MoneyCommandManager(this);
     }
 
 }

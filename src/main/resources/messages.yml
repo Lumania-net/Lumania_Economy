@@ -2,7 +2,7 @@
 # Messages Configuration for Lumania Economy #
 # ------------------------------------------ #
 
-Prefix: ""
+Prefix: "&b&lLumania &8• &7"
 Errors:
   ConsoleSender: "%prefix% &cDu must ein Spieler sein, um diesen Befehl ausführen zu können"
   NoPermissions: "%prefix% &cDazu hast du keine Rechte"
@@ -10,6 +10,8 @@ Errors:
   NoOneToPay: "%prefix% &cEs ist niemand online, dem du etwas zahlen könntest"
   PaySelf: "%prefix% &cDu kannst dir selber keine Coins zahlen"
   TargetHasToggledPay: "%prefix% &b%target% &7mag keine Zahlungen erhalten"
+  NumberFormatException: "%prefix% &cDu musst eine ganze Zahl im positiven bereich eingeben"
+  NotEnoughCoins: "%prefix% &cDazu hast du nicht genügend Coins"
 Commands:
   Money:
     Show:
@@ -45,7 +47,7 @@ Commands:
     Player:
       Send: "%prefix% Du hast &b%target% %coins% Coins &7gezahlt"
       Send1: "%prefix% Du hast &b%target% 1 Coin &7gezahlt"
-      Other: "%prefix% &b%target% hat dir %coins% Coins &7gezahlt"
-      Other1: "%prefix% &b%target% hat dir 1 Coin &7gezahlt"
+      Other: "%prefix% &b%target% &7hat dir %coins% Coins &7gezahlt"
+      Other1: "%prefix% &b%target% &7hat dir 1 Coin &7gezahlt"
   Payall: "%prefix% Du hast jedem Spieler &b%coins% Coins &7gezahlt"
   Payall1: "%prefix% Du hast jedem Spieler &b1 Coin &7gezahlt"
