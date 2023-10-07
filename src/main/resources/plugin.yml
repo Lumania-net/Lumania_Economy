@@ -4,3 +4,9 @@ main: net.lumania.economy.Economy
 api-version: '1.20'
 authors: [Lumania, sparkofyt]
 softdepend: [PlaceholderAPI]
+
+commands:
+  payall:
+  pay:
+  money:
+    aliases: [coins]
