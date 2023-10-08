@@ -15,7 +15,7 @@ public class PlayerHandler implements Listener {
     }
 
     /* Listeners */
-    @EventHandler(priority = EventPriority.HIGHEST)
+    @EventHandler(priority = EventPriority.HIGH)
     public void on(PlayerJoinEvent event) {
         Economy.getInstance().getEconomy().setupPlayer(event.getPlayer().getUniqueId());
     }
