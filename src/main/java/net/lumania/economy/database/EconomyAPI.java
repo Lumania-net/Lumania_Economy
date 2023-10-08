@@ -45,6 +45,20 @@ public class EconomyAPI {
         }
     }
 
+    public int getID(UUID uuid) {
+        if(!playerExists(uuid)) setupPlayer(uuid);
+        try(Connection conn = dataSource.getConnection(); PreparedStatement pstmt = conn.prepareStatement("SELECT id FROM economy WHERE uuid=?")) {
+            pstmt.setString(1, uuid.toString());
+            ResultSet rs = pstmt.executeQuery();
+            if(rs.next()) {
+                return rs.getInt("id");
+            }
+        } catch (SQLException exception) {
+            logger.error("Error while getting player id", exception);
+        }
+        return 0;
+    }
+
     public int getCoins(UUID uuid) {
         if(!playerExists(uuid)) setupPlayer(uuid);
         try(Connection conn = dataSource.getConnection(); PreparedStatement pstmt = conn.prepareStatement("SELECT coins FROM economy WHERE uuid=?")) {
