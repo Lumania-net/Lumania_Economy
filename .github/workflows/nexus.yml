@@ -20,7 +20,7 @@ jobs:
       with:
         serverUrl: http://repo.lumania.net
         username: admin
-        password: ${{ secrets.password }}
+        password: ${{ secrets.NEXUS_PASSWORD }}
         format: maven2
         repository: maven-releases
         coordinates: groupId=net.lumania artifactId=economy version=1.1
