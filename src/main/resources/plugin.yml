@@ -1,4 +1,4 @@
-name: Economy
+name: LumaniaEconomy
 version: '${project.version}'
 main: net.lumania.economy.Economy
 api-version: '1.20'
