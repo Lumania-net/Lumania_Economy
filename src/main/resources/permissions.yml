@@ -3,6 +3,7 @@
 # --------------------------------------------- #
 
 Commands:
+  Reload: "lumania.economy.reload"
   Money:
     Show:
       Self: "lumania.commands.money.show.self"

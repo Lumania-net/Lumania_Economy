@@ -6,6 +6,7 @@ authors: [Lumania, sparkofyt]
 softdepend: [PlaceholderAPI]
 
 commands:
+  economyreload:
   payall:
   pay:
   money:

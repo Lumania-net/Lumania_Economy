@@ -2,7 +2,7 @@
 # Messages Configuration for Lumania Economy #
 # ------------------------------------------ #
 
-Prefix: "&b&lLumania &8• &7"
+Prefix: "&b&lLumania &8•&7"
 Errors:
   ConsoleSender: "%prefix% &cDu must ein Spieler sein, um diesen Befehl ausführen zu können"
   NoPermissions: "%prefix% &cDazu hast du keine Rechte"
@@ -13,6 +13,7 @@ Errors:
   NumberFormatException: "%prefix% &cDu musst eine ganze Zahl im positiven bereich eingeben"
   NotEnoughCoins: "%prefix% &cDazu hast du nicht genügend Coins"
 Commands:
+  Reload: "%prefix% Alle Configs wurden neu geladen"
   Money:
     Show:
       Self: "%prefix% Du hast &b%coins% Coins"
