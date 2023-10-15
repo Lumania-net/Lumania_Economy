@@ -1,6 +1,7 @@
 package net.lumania.economy.expansions;
 
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
+import net.lumania.economy.Economy;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -31,7 +32,7 @@ public class CoinsExpansion extends PlaceholderExpansion {
 
     @Override
     public @Nullable String onPlaceholderRequest(Player player, @NotNull String params) {
-        return super.onPlaceholderRequest(player, params);
+        return super.onPlaceholderRequest(player, String.valueOf(Economy.getInstance().getEconomy().getCoins(player.getUniqueId())));
     }
 
 }
