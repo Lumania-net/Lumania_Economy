@@ -6,6 +6,6 @@ public abstract class SubCommand {
 
     /* Methods */
     public abstract String getName();
-    public abstract void perform(Player player, String args[]);
+    public abstract void perform(Player player, String[] args);
 
 }

@@ -1,19 +1,20 @@
 package net.lumania.economy;
 
+import com.zaxxer.hikari.HikariDataSource;
 import lombok.Getter;
 import net.lumania.economy.commands.PayCommand;
 import net.lumania.economy.commands.ReloadCommand;
 import net.lumania.economy.commands.money.MoneyCommandManager;
 import net.lumania.economy.commands.PayallCommand;
-import net.lumania.economy.database.DatabaseUtils;
-import net.lumania.economy.database.EconomyAPI;
+import net.lumania.economy.api.EconomyAPI;
 import net.lumania.economy.expansions.CoinsExpansion;
 import net.lumania.economy.listeners.PlayerHandler;
-import net.lumania.economy.utils.ConfigManager;
+import net.lumania.utils.database.DataSourceFactory;
+import net.lumania.utils.database.SQLUtils;
+import net.lumania.utils.config.ConfigManager;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import javax.sql.DataSource;
 import java.sql.SQLException;
 
 
@@ -26,7 +27,7 @@ public final class Economy extends JavaPlugin {
     @Getter private ConfigManager messages;
     @Getter private ConfigManager permissions;
 
-    @Getter private DataSource dataSource;
+    @Getter private HikariDataSource dataSource;
     @Getter private EconomyAPI economy;
 
     /* Methods */
@@ -53,21 +54,8 @@ public final class Economy extends JavaPlugin {
     }
 
     private void setupDatabase() {
-        DatabaseUtils.DatabaseCredentials credentials = new DatabaseUtils.DatabaseCredentials(
-                database.getString("Host"),
-                database.getString("Database"),
-                database.getString("Username"),
-                database.getString("Password"),
-                database.getInt("Port")
-        );
-
-        dataSource = DatabaseUtils.createDataSource(credentials);
-
-        try {
-            DatabaseUtils.executeSQLFile(this, dataSource, "setup.sql");
-        } catch (SQLException exception) {
-            getSLF4JLogger().error("Error while executing SQL File", exception);
-        }
+        dataSource = DataSourceFactory.create(database);
+        SQLUtils.executeSQLFile(this, dataSource, "setup.sql");
 
         economy = new EconomyAPI(dataSource);
     }

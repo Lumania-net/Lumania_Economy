@@ -73,6 +73,10 @@
             <id>placeholderapi</id>
             <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
         </repository>
+        <repository>
+            <id>lumania</id>
+            <url>https://nexus.lumania.net/repository/lumania/</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -98,6 +102,11 @@
             <artifactId>placeholderapi</artifactId>
             <version>2.11.4</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.lumania</groupId>
+            <artifactId>utils</artifactId>
+            <version>1.0</version>
         </dependency>
     </dependencies>
 </project>
